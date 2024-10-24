@@ -1,0 +1,685 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Thú cưng</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+    margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-default_background {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-default_background {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-uiBlue { background-color: rgba(35, 131, 226, .07); }
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-transparentGray { background-color: rgba(227, 226, 224, 0); }
+.select-value-color-translucentGray { background-color: rgba(0, 0, 0, 0.06); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+.select-value-color-pageGlass { background-color: undefined; }
+.select-value-color-washGlass { background-color: undefined; }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="1288f238-6219-80a7-b32d-ee1cc741b8cc" class="page mono"><header><div class="page-header-icon undefined"><img class="icon" src="1000_F_440641546_CPSMtKCxG3bad69Ne4nQizUbRwzZ6qwm.jpg"/></div><h1 class="page-title">Thú cưng</h1><p class="page-description"></p></header><div class="page-body"><hr id="1288f238-6219-800f-954c-c665063c6d59"/><div id="1288f238-6219-80bb-898a-f59d53c8a3dc" class="collection-content"><h4 class="collection-title"></h4><table class="collection-content"><thead><tr><th><span class="icon property-icon"><svg role="graphics-symbol" viewBox="0 0 16 16" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.45);flex-shrink:0" class="typesFile"><path d="M12.5938 8.44043L7.54883 13.4854C6.26367 14.7773 4.54102 14.6475 3.44043 13.54C2.32617 12.4326 2.20312 10.7168 3.49512 9.4248L10.3926 2.52734C11.1445 1.77539 12.2725 1.63867 13.0039 2.37695C13.7422 3.11523 13.6055 4.22949 12.8535 4.98828L6.08594 11.7627C5.77832 12.0703 5.41602 11.9814 5.2041 11.7764C4.99902 11.5576 4.91016 11.2021 5.21777 10.8877L9.93457 6.1709C10.1738 5.93164 10.1875 5.58301 9.96191 5.35059C9.72949 5.13184 9.38086 5.13867 9.1416 5.37793L4.39746 10.1152C3.67285 10.8535 3.7002 11.9746 4.34961 12.624C5.05371 13.3281 6.12012 13.3145 6.8584 12.5762L13.6602 5.77441C14.9795 4.45508 14.9316 2.71875 13.7764 1.55664C12.6416 0.428711 10.8779 0.34668 9.55176 1.66602L2.61328 8.61816C0.883789 10.3477 1 12.8291 2.57227 14.4014C4.14453 15.9668 6.63281 16.0898 8.3623 14.3672L13.4414 9.28809C13.6738 9.0625 13.667 8.64551 13.4346 8.41992C13.209 8.18066 12.833 8.21484 12.5938 8.44043Z"></path></svg></span>icon</th><th><span class="icon property-icon"><svg role="graphics-symbol" viewBox="0 0 16 16" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.45);flex-shrink:0" class="typesTitle"><path d="M0.637695 13.1914C1.0957 13.1914 1.32812 13 1.47852 12.5215L2.24414 10.3887H6.14746L6.90625 12.5215C7.05664 13 7.2959 13.1914 7.74707 13.1914C8.22559 13.1914 8.5332 12.9043 8.5332 12.4531C8.5332 12.2891 8.50586 12.1523 8.44434 11.9678L5.41602 3.79199C5.2041 3.21777 4.82129 2.9375 4.19922 2.9375C3.60449 2.9375 3.21484 3.21777 3.0166 3.78516L-0.0322266 12.002C-0.09375 12.1797 -0.121094 12.3232 -0.121094 12.4668C-0.121094 12.918 0.166016 13.1914 0.637695 13.1914ZM2.63379 9.12402L4.17871 4.68066H4.21973L5.76465 9.12402H2.63379ZM12.2793 13.2324C13.3115 13.2324 14.2891 12.6787 14.7129 11.8037H14.7402V12.5762C14.7471 12.9863 15.0273 13.2393 15.4238 13.2393C15.834 13.2393 16.1143 12.9795 16.1143 12.5215V8.00977C16.1143 6.49902 14.9658 5.52148 13.1543 5.52148C11.7666 5.52148 10.6592 6.08887 10.2695 6.99121C10.1943 7.15527 10.1533 7.3125 10.1533 7.46289C10.1533 7.81152 10.4062 8.04395 10.7686 8.04395C11.0215 8.04395 11.2129 7.94824 11.3496 7.73633C11.7529 6.99121 12.2861 6.65625 13.1064 6.65625C14.0977 6.65625 14.6992 7.20996 14.6992 8.1123V8.67285L12.5664 8.7959C10.7686 8.8916 9.77734 9.69824 9.77734 11.0107C9.77734 12.3369 10.8096 13.2324 12.2793 13.2324ZM12.6621 12.1387C11.8008 12.1387 11.2129 11.667 11.2129 10.9561C11.2129 10.2725 11.7598 9.82129 12.7578 9.75977L14.6992 9.62988V10.3203C14.6992 11.3457 13.7969 12.1387 12.6621 12.1387Z"></path></svg></span>name</th><th><span class="icon property-icon"><svg role="graphics-symbol" viewBox="0 0 16 16" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.45);flex-shrink:0" class="typesFile"><path d="M12.5938 8.44043L7.54883 13.4854C6.26367 14.7773 4.54102 14.6475 3.44043 13.54C2.32617 12.4326 2.20312 10.7168 3.49512 9.4248L10.3926 2.52734C11.1445 1.77539 12.2725 1.63867 13.0039 2.37695C13.7422 3.11523 13.6055 4.22949 12.8535 4.98828L6.08594 11.7627C5.77832 12.0703 5.41602 11.9814 5.2041 11.7764C4.99902 11.5576 4.91016 11.2021 5.21777 10.8877L9.93457 6.1709C10.1738 5.93164 10.1875 5.58301 9.96191 5.35059C9.72949 5.13184 9.38086 5.13867 9.1416 5.37793L4.39746 10.1152C3.67285 10.8535 3.7002 11.9746 4.34961 12.624C5.05371 13.3281 6.12012 13.3145 6.8584 12.5762L13.6602 5.77441C14.9795 4.45508 14.9316 2.71875 13.7764 1.55664C12.6416 0.428711 10.8779 0.34668 9.55176 1.66602L2.61328 8.61816C0.883789 10.3477 1 12.8291 2.57227 14.4014C4.14453 15.9668 6.63281 16.0898 8.3623 14.3672L13.4414 9.28809C13.6738 9.0625 13.667 8.64551 13.4346 8.41992C13.209 8.18066 12.833 8.21484 12.5938 8.44043Z"></path></svg></span>buff</th></tr></thead><tbody><tr id="00a4ddf9-859b-4628-866e-1097466a1dfc"><td class="cell-CDP\"><span style="margin-right:6px"><a href="Baby_Dinosaur_(pet).png"><img style="width:20px;max-height:24px" src="Baby_Dinosaur_(pet).png" alt="Baby_Dinosaur_(pet).png"/></a></span></td><td class="cell-title"><a href="https://www.notion.so/Baby-Dinosaur-00a4ddf9859b4628866e1097466a1dfc?pvs=21">Baby Dinosaur</a></td><td class="cell-?jM:"><span style="margin-right:6px"><a href="Baby_Dinosaur_(buff).png"><img style="width:20px;max-height:24px" src="Baby_Dinosaur_(buff).png" alt="Baby_Dinosaur_(buff).png"/></a></span></td></tr><tr id="37bfec28-bfa3-4d68-9fa1-d9cfaf27674d"><td class="cell-CDP\"><span style="margin-right:6px"><a href="Baby_Eater.png"><img style="width:20px;max-height:24px" src="Baby_Eater.png" alt="Baby_Eater.png"/></a></span></td><td class="cell-title"><a href="https://www.notion.so/Baby-Eater-37bfec28bfa34d689fa1d9cfaf27674d?pvs=21">Baby Eater</a></td><td class="cell-?jM:"><span style="margin-right:6px"><a href="Baby_Eater_(buff).png"><img style="width:20px;max-height:24px" src="Baby_Eater_(buff).png" alt="Baby_Eater_(buff).png"/></a></span></td></tr><tr id="6edb1401-5956-46fa-bbc0-8c84d90e9ddd"><td class="cell-CDP\"><span style="margin-right:6px"><a href="Baby_Face_Monster.png"><img style="width:20px;max-height:24px" src="Baby_Face_Monster.png" alt="Baby_Face_Monster.png"/></a></span></td><td class="cell-title"><a href="https://www.notion.so/Baby-Face-Monster-6edb1401595646fabbc08c84d90e9ddd?pvs=21">Baby Face Monster</a></td><td class="cell-?jM:"><span style="margin-right:6px"><a href="Baby_Face_Monster_(buff).png"><img style="width:20px;max-height:24px" src="Baby_Face_Monster_(buff).png" alt="Baby_Face_Monster_(buff).png"/></a></span></td></tr><tr id="1288f238-6219-80a5-bc41-e833915b1f51"><td class="cell-CDP\"><span style="margin-right:6px"><a href="Baby_Grinch.png"><img style="width:20px;max-height:24px" src="Baby_Grinch.png" alt="Baby_Grinch.png"/></a></span></td><td class="cell-title"><a href="https://www.notion.so/Baby-Grinch-1288f238621980a5bc41e833915b1f51?pvs=21">Baby Grinch</a></td><td class="cell-?jM:"><span style="margin-right:6px"><a href="Baby_Grinch_(buff).png"><img style="width:20px;max-height:24px" src="Baby_Grinch_(buff).png" alt="Baby_Grinch_(buff).png"/></a></span></td></tr><tr id="1288f238-6219-80f9-aa0a-e3cb66f77964"><td class="cell-CDP\"><span style="margin-right:6px"><a href="Baby_Hornet.png"><img style="width:20px;max-height:24px" src="Baby_Hornet.png" alt="Baby_Hornet.png"/></a></span></td><td class="cell-title"><a href="https://www.notion.so/Baby-Hornet-1288f238621980f9aa0ae3cb66f77964?pvs=21">Baby Hornet</a></td><td class="cell-?jM:"><span style="margin-right:6px"><a href="Baby_Hornet_(buff).png"><img style="width:20px;max-height:24px" src="Baby_Hornet_(buff).png" alt="Baby_Hornet_(buff).png"/></a></span></td></tr><tr id="1288f238-6219-8014-b887-ec1d5a8457bd"><td class="cell-CDP\"><span style="margin-right:6px"><a href="Baby_Imp.png"><img style="width:20px;max-height:24px" src="Baby_Imp.png" alt="Baby_Imp.png"/></a></span></td><td class="cell-title"><a href="https://www.notion.so/Baby-Imp-1288f23862198014b887ec1d5a8457bd?pvs=21">Baby Imp</a></td><td class="cell-?jM:"><span style="margin-right:6px"><a href="Baby_Imp_(buff).png"><img style="width:20px;max-height:24px" src="Baby_Imp_(buff).png" alt="Baby_Imp_(buff).png"/></a></span></td></tr><tr id="1288f238-6219-80af-ab9b-ee9c7ea4fc97"><td class="cell-CDP\"><span style="margin-right:6px"><a href="Baby_Penguin.png"><img style="width:20px;max-height:24px" src="Baby_Penguin.png" alt="Baby_Penguin.png"/></a></span></td><td class="cell-title"><a href="https://www.notion.so/Baby-Penguin-1288f238621980afab9bee9c7ea4fc97?pvs=21">Baby Penguin</a></td><td class="cell-?jM:"><span style="margin-right:6px"><a href="Baby_Penguin_(buff).png"><img style="width:20px;max-height:24px" src="Baby_Penguin_(buff).png" alt="Baby_Penguin_(buff).png"/></a></span></td></tr><tr id="1288f238-6219-80d5-86dc-cb6e0b351c4a"><td class="cell-CDP\"><span style="margin-right:6px"><a href="Baby_Red_Panda.png"><img style="width:20px;max-height:24px" src="Baby_Red_Panda.png" alt="Baby_Red_Panda.png"/></a></span></td><td class="cell-title"><a href="https://www.notion.so/Baby-Red-Panda-1288f238621980d586dccb6e0b351c4a?pvs=21">Baby Red Panda</a></td><td class="cell-?jM:"><span style="margin-right:6px"><a href="Baby_Red_Panda_(buff).png"><img style="width:20px;max-height:24px" src="Baby_Red_Panda_(buff).png" alt="Baby_Red_Panda_(buff).png"/></a></span></td></tr><tr id="1288f238-6219-8014-8e39-d146be36ea9d"><td class="cell-CDP\"><span style="margin-right:6px"><a href="Baby_Skeletron_Head.png"><img style="width:20px;max-height:24px" src="Baby_Skeletron_Head.png" alt="Baby_Skeletron_Head.png"/></a></span></td><td class="cell-title"><a href="https://www.notion.so/Baby-Skeletron-Head-1288f238621980148e39d146be36ea9d?pvs=21">Baby Skeletron Head</a></td><td class="cell-?jM:"><span style="margin-right:6px"><a href="Baby_Skeletron_Head_(buff).png"><img style="width:20px;max-height:24px" src="Baby_Skeletron_Head_(buff).png" alt="Baby_Skeletron_Head_(buff).png"/></a></span></td></tr><tr id="1288f238-6219-80e3-827c-d54ba3f7138a"><td class="cell-CDP\"><span style="margin-right:6px"><a href="Baby_Snowman.png"><img style="width:20px;max-height:24px" src="Baby_Snowman.png" alt="Baby_Snowman.png"/></a></span></td><td class="cell-title"><a href="https://www.notion.so/Baby-Snowman-1288f238621980e3827cd54ba3f7138a?pvs=21">Baby Snowman</a></td><td class="cell-?jM:"><span style="margin-right:6px"><a href="Baby_Snowman_(buff).png"><img style="width:20px;max-height:24px" src="Baby_Snowman_(buff).png" alt="Baby_Snowman_(buff).png"/></a></span></td></tr><tr id="1288f238-6219-8070-9907-faecea0b3f6f"><td class="cell-CDP\"><span style="margin-right:6px"><a href="Baby_Truffle.png"><img style="width:20px;max-height:24px" src="Baby_Truffle.png" alt="Baby_Truffle.png"/></a></span></td><td class="cell-title"><a href="https://www.notion.so/Baby-Truffle-1288f238621980709907faecea0b3f6f?pvs=21">Baby Truffle</a></td><td class="cell-?jM:"><span style="margin-right:6px"><a href="Baby_Truffle_(buff).png"><img style="width:20px;max-height:24px" src="Baby_Truffle_(buff).png" alt="Baby_Truffle_(buff).png"/></a></span></td></tr><tr id="1288f238-6219-8036-9da7-d0036766eec4"><td class="cell-CDP\"><span style="margin-right:6px"><a href="Baby_Werewolf.png"><img style="width:20px;max-height:24px" src="Baby_Werewolf.png" alt="Baby_Werewolf.png"/></a></span></td><td class="cell-title"><a href="https://www.notion.so/Baby-Werewolf-1288f238621980369da7d0036766eec4?pvs=21">Baby Werewolf</a></td><td class="cell-?jM:"><span style="margin-right:6px"><a href="Baby_Werewolf_(buff).png"><img style="width:20px;max-height:24px" src="Baby_Werewolf_(buff).png" alt="Baby_Werewolf_(buff).png"/></a></span></td></tr><tr id="1288f238-6219-8021-88cc-c7455d97d77c"><td class="cell-CDP\"><span style="margin-right:6px"><a href="Bernie.gif"><img style="width:20px;max-height:24px" src="Bernie.gif" alt="Bernie.gif"/></a></span></td><td class="cell-title"><a href="https://www.notion.so/Bernie-1288f2386219802188ccc7455d97d77c?pvs=21">Bernie</a></td><td class="cell-?jM:"><span style="margin-right:6px"><a href="Bernie_(buff).png"><img style="width:20px;max-height:24px" src="Bernie_(buff).png" alt="Bernie_(buff).png"/></a></span></td></tr><tr id="1288f238-6219-8072-9eb2-d350a38a0415"><td class="cell-CDP\"><span style="margin-right:6px"><a href="Black_Cat.png"><img style="width:20px;max-height:24px" src="Black_Cat.png" alt="Black_Cat.png"/></a></span></td><td class="cell-title"><a href="https://www.notion.so/Black-Cat-1288f238621980729eb2d350a38a0415?pvs=21">Black Cat</a></td><td class="cell-?jM:"><span style="margin-right:6px"><a href="Black_Cat_(buff).png"><img style="width:20px;max-height:24px" src="Black_Cat_(buff).png" alt="Black_Cat_(buff).png"/></a></span></td></tr><tr id="1288f238-6219-80e0-b258-f03fe08f6fe5"><td class="cell-CDP\"><span style="margin-right:6px"><a href="Blue_Chicken.png"><img style="width:20px;max-height:24px" src="Blue_Chicken.png" alt="Blue_Chicken.png"/></a></span></td><td class="cell-title"><a href="https://www.notion.so/Blue-Chicken-1288f238621980e0b258f03fe08f6fe5?pvs=21">Blue Chicken</a></td><td class="cell-?jM:"><span style="margin-right:6px"><a href="Blue_Chicken_(buff).png"><img style="width:20px;max-height:24px" src="Blue_Chicken_(buff).png" alt="Blue_Chicken_(buff).png"/></a></span></td></tr><tr id="1288f238-6219-8060-97b3-e859f6350b53"><td class="cell-CDP\"><span style="margin-right:6px"><a href="Bunny_Pet.png"><img style="width:20px;max-height:24px" src="Bunny_Pet.png" alt="Bunny_Pet.png"/></a></span></td><td class="cell-title"><a href="https://www.notion.so/Bunny-1288f2386219806097b3e859f6350b53?pvs=21">Bunny</a></td><td class="cell-?jM:"><span style="margin-right:6px"><a href="Pet_Bunny_(buff).png"><img style="width:20px;max-height:24px" src="Pet_Bunny_(buff).png" alt="Pet_Bunny_(buff).png"/></a></span></td></tr><tr id="1288f238-6219-8079-9ae8-eabd57897ec9"><td class="cell-CDP\"><span style="margin-right:6px"><a href="Caveling_Gardener.png"><img style="width:20px;max-height:24px" src="Caveling_Gardener.png" alt="Caveling_Gardener.png"/></a></span></td><td class="cell-title"><a href="https://www.notion.so/Caveling-Gardener-1288f238621980799ae8eabd57897ec9?pvs=21">Caveling Gardener</a></td><td class="cell-?jM:"><span style="margin-right:6px"><a href="Caveling_Gardener_(buff).png"><img style="width:20px;max-height:24px" src="Caveling_Gardener_(buff).png" alt="Caveling_Gardener_(buff).png"/></a></span></td></tr><tr id="1288f238-6219-804a-824f-d3d296aad5a9"><td class="cell-CDP\"><span style="margin-right:6px"><a href="Chester.png"><img style="width:20px;max-height:24px" src="Chester.png" alt="Chester.png"/></a></span></td><td class="cell-title"><a href="https://www.notion.so/Chester-1288f2386219804a824fd3d296aad5a9?pvs=21">Chester</a></td><td class="cell-?jM:"><span style="margin-right:6px"><a href="Chester_(buff).png"><img style="width:20px;max-height:24px" src="Chester_(buff).png" alt="Chester_(buff).png"/></a></span></td></tr><tr id="1288f238-6219-804a-9adc-e87afc002d30"><td class="cell-CDP\"><span style="margin-right:6px"><a href="Companion_Cube_(pet).png"><img style="width:20px;max-height:24px" src="Companion_Cube_(pet).png" alt="Companion_Cube_(pet).png"/></a></span></td><td class="cell-title"><a href="https://www.notion.so/Companion-Cube-1288f2386219804a9adce87afc002d30?pvs=21">Companion Cube</a></td><td class="cell-?jM:"><span style="margin-right:6px"><a href="Companion_Cube_(buff).png"><img style="width:20px;max-height:24px" src="Companion_Cube_(buff).png" alt="Companion_Cube_(buff).png"/></a></span></td></tr><tr id="1288f238-6219-8061-94de-e9abae456d2f"><td class="cell-CDP\"><span style="margin-right:6px"><a href="Cursed_Sapling_(pet).png"><img style="width:20px;max-height:24px" src="Cursed_Sapling_(pet).png" alt="Cursed_Sapling_(pet).png"/></a></span></td><td class="cell-title"><a href="https://www.notion.so/Cursed-Sapling-1288f2386219806194dee9abae456d2f?pvs=21">Cursed Sapling</a></td><td class="cell-?jM:"><span style="margin-right:6px"><a href="Cursed_Sapling_(buff).png"><img style="width:20px;max-height:24px" src="Cursed_Sapling_(buff).png" alt="Cursed_Sapling_(buff).png"/></a></span></td></tr><tr id="1288f238-6219-80b9-9670-c767e2a79e16"><td class="cell-CDP\"><span style="margin-right:6px"><a href="Dynamite_Kitten.png"><img style="width:20px;max-height:24px" src="Dynamite_Kitten.png" alt="Dynamite_Kitten.png"/></a></span></td><td class="cell-title"><a href="https://www.notion.so/Dynamite-Kitten-1288f238621980b99670c767e2a79e16?pvs=21">Dynamite Kitten</a></td><td class="cell-?jM:"><span style="margin-right:6px"><a href="Dynamite_Kitten_(buff).png"><img style="width:20px;max-height:24px" src="Dynamite_Kitten_(buff).png" alt="Dynamite_Kitten_(buff).png"/></a></span></td></tr><tr id="1288f238-6219-8015-83d0-cf9a5282ed2d"><td class="cell-CDP\"><span style="margin-right:6px"><a href="Estee.gif"><img style="width:20px;max-height:24px" src="Estee.gif" alt="Estee.gif"/></a></span></td><td class="cell-title"><a href="https://www.notion.so/Estee-1288f2386219801583d0cf9a5282ed2d?pvs=21">Estee</a></td><td class="cell-?jM:"><span style="margin-right:6px"><a href="Estee.png"><img style="width:20px;max-height:24px" src="Estee.png" alt="Estee.png"/></a></span></td></tr><tr id="1288f238-6219-807f-8b2b-dce0665fe071"><td class="cell-CDP\"><span style="margin-right:6px"><a href="Eyeball_Spring_Pet.png"><img style="width:20px;max-height:24px" src="Eyeball_Spring_Pet.png" alt="Eyeball_Spring_Pet.png"/></a></span></td><td class="cell-title"><a href="https://www.notion.so/Eyeball-Spring-1288f2386219807f8b2bdce0665fe071?pvs=21">Eyeball Spring</a></td><td class="cell-?jM:"><span style="margin-right:6px"><a href="Eyeball_Spring_(buff).png"><img style="width:20px;max-height:24px" src="Eyeball_Spring_(buff).png" alt="Eyeball_Spring_(buff).png"/></a></span></td></tr><tr id="1288f238-6219-80f0-a0e5-dc4be496fcab"><td class="cell-CDP\"><span style="margin-right:6px"><a href="Fennec_Fox.png"><img style="width:20px;max-height:24px" src="Fennec_Fox.png" alt="Fennec_Fox.png"/></a></span></td><td class="cell-title"><a href="https://www.notion.so/Fennec-Fox-1288f238621980f0a0e5dc4be496fcab?pvs=21">Fennec Fox</a></td><td class="cell-?jM:"><span style="margin-right:6px"><a href="Fennec_Fox_(buff).png"><img style="width:20px;max-height:24px" src="Fennec_Fox_(buff).png" alt="Fennec_Fox_(buff).png"/></a></span></td></tr><tr id="1288f238-6219-8055-8b9a-c209e3970112"><td class="cell-CDP\"><span style="margin-right:6px"><a href="Glittery_Butterfly.png"><img style="width:20px;max-height:24px" src="Glittery_Butterfly.png" alt="Glittery_Butterfly.png"/></a></span></td><td class="cell-title"><a href="https://www.notion.so/Glittery-Butterfly-1288f238621980558b9ac209e3970112?pvs=21">Glittery Butterfly</a></td><td class="cell-?jM:"><span style="margin-right:6px"><a href="Glittery_Butterfly_(buff).png"><img style="width:20px;max-height:24px" src="Glittery_Butterfly_(buff).png" alt="Glittery_Butterfly_(buff).png"/></a></span></td></tr><tr id="1288f238-6219-802c-a5b4-f530720324e1"><td class="cell-CDP\"><span style="margin-right:6px"><a href="Glommer.png"><img style="width:20px;max-height:24px" src="Glommer.png" alt="Glommer.png"/></a></span></td><td class="cell-title"><a href="https://www.notion.so/Glommer-1288f2386219802ca5b4f530720324e1?pvs=21">Glommer</a></td><td class="cell-?jM:"><span style="margin-right:6px"><a href="Glommer_(buff).png"><img style="width:20px;max-height:24px" src="Glommer_(buff).png" alt="Glommer_(buff).png"/></a></span></td></tr><tr id="1288f238-6219-80c9-8390-fdc30da7ca9c"><td class="cell-CDP\"><span style="margin-right:6px"><a href="Hoardagron.png"><img style="width:20px;max-height:24px" src="Hoardagron.png" alt="Hoardagron.png"/></a></span></td><td class="cell-title"><a href="https://www.notion.so/Hoardagron-1288f238621980c98390fdc30da7ca9c?pvs=21">Hoardagron</a></td><td class="cell-?jM:"><span style="margin-right:6px"><a href="Hoardagron_(buff).png"><img style="width:20px;max-height:24px" src="Hoardagron_(buff).png" alt="Hoardagron_(buff).png"/></a></span></td></tr><tr id="1288f238-6219-80e7-ae5e-ffa199b49c8d"><td class="cell-CDP\"><span style="margin-right:6px"><a href="Junimo.png"><img style="width:20px;max-height:24px" src="Junimo.png" alt="Junimo.png"/></a></span></td><td class="cell-title"><a href="https://www.notion.so/Junimo-1288f238621980e7ae5effa199b49c8d?pvs=21">Junimo</a></td><td class="cell-?jM:"><span style="margin-right:6px"><a href="Junimo_(buff).png"><img style="width:20px;max-height:24px" src="Junimo_(buff).png" alt="Junimo_(buff).png"/></a></span></td></tr><tr id="1288f238-6219-8001-8588-d85b4531248b"><td class="cell-CDP\"><span style="margin-right:6px"><a href="Lil_Harpy.png"><img style="width:20px;max-height:24px" src="Lil_Harpy.png" alt="Lil&#x27;_Harpy.png"/></a></span></td><td class="cell-title"><a href="https://www.notion.so/Lil-Harpy-1288f238621980018588d85b4531248b?pvs=21">Lil&#x27; Harpy</a></td><td class="cell-?jM:"><span style="margin-right:6px"><a href="Lil_Harpy_(buff).png"><img style="width:20px;max-height:24px" src="Lil_Harpy_(buff).png" alt="Lil&#x27;_Harpy_(buff).png"/></a></span></td></tr><tr id="1288f238-6219-801a-90f3-c42642863bd5"><td class="cell-CDP\"><span style="margin-right:6px"><a href="Pet_Lizard.png"><img style="width:20px;max-height:24px" src="Pet_Lizard.png" alt="Pet_Lizard.png"/></a></span></td><td class="cell-title"><a href="https://www.notion.so/Lizard-1288f2386219801a90f3c42642863bd5?pvs=21">Lizard</a></td><td class="cell-?jM:"><span style="margin-right:6px"><a href="Pet_Lizard_(buff).png"><img style="width:20px;max-height:24px" src="Pet_Lizard_(buff).png" alt="Pet_Lizard_(buff).png"/></a></span></td></tr><tr id="1288f238-6219-80dd-b3d9-e89e22c33ed7"><td class="cell-CDP\"><span style="margin-right:6px"><a href="Mini_Minotaur.png"><img style="width:20px;max-height:24px" src="Mini_Minotaur.png" alt="Mini_Minotaur.png"/></a></span></td><td class="cell-title"><a href="https://www.notion.so/Mini-Minotaur-1288f238621980ddb3d9e89e22c33ed7?pvs=21">Mini Minotaur</a></td><td class="cell-?jM:"><span style="margin-right:6px"><a href="Mini_Minotaur_(buff).png"><img style="width:20px;max-height:24px" src="Mini_Minotaur_(buff).png" alt="Mini_Minotaur_(buff).png"/></a></span></td></tr><tr id="1288f238-6219-8017-8d97-c08348297d21"><td class="cell-CDP\"><span style="margin-right:6px"><a href="Parrot_(pet).png"><img style="width:20px;max-height:24px" src="Parrot_(pet).png" alt="Parrot_(pet).png"/></a></span></td><td class="cell-title"><a href="https://www.notion.so/Parrot-1288f238621980178d97c08348297d21?pvs=21">Parrot</a></td><td class="cell-?jM:"><span style="margin-right:6px"><a href="Pet_Parrot_(buff).png"><img style="width:20px;max-height:24px" src="Pet_Parrot_(buff).png" alt="Pet_Parrot_(buff).png"/></a></span></td></tr><tr id="1288f238-6219-8096-a316-e09ab257c1bb"><td class="cell-CDP\"><span style="margin-right:6px"><a href="Pig_Man.png"><img style="width:20px;max-height:24px" src="Pig_Man.png" alt="Pig_Man.png"/></a></span></td><td class="cell-title"><a href="https://www.notion.so/Pig-Man-1288f23862198096a316e09ab257c1bb?pvs=21">Pig Man</a></td><td class="cell-?jM:"><span style="margin-right:6px"><a href="Pig_(buff).png"><img style="width:20px;max-height:24px" src="Pig_(buff).png" alt="Pig_(buff).png"/></a></span></td></tr><tr id="1288f238-6219-8023-958c-d4be4732c8bb"><td class="cell-CDP\"><span style="margin-right:6px"><a href="Plantero.png"><img style="width:20px;max-height:24px" src="Plantero.png" alt="Plantero.png"/></a></span></td><td class="cell-title"><a href="https://www.notion.so/Plantero-1288f23862198023958cd4be4732c8bb?pvs=21">Plantero</a></td><td class="cell-?jM:"><span style="margin-right:6px"><a href="Plantero_(buff).png"><img style="width:20px;max-height:24px" src="Plantero_(buff).png" alt="Plantero_(buff).png"/></a></span></td></tr><tr id="1288f238-6219-801b-92de-dd816c0a6279"><td class="cell-CDP\"><span style="margin-right:6px"><a href="Propeller_Gato.png"><img style="width:20px;max-height:24px" src="Propeller_Gato.png" alt="Propeller_Gato.png"/></a></span></td><td class="cell-title"><a href="https://www.notion.so/Propeller-Gato-1288f2386219801b92dedd816c0a6279?pvs=21">Propeller Gato</a></td><td class="cell-?jM:"><span style="margin-right:6px"><a href="Propeller_Gato_(buff).png"><img style="width:20px;max-height:24px" src="Propeller_Gato_(buff).png" alt="Propeller_Gato_(buff).png"/></a></span></td></tr><tr id="1288f238-6219-80fa-97d6-c04cb8466233"><td class="cell-CDP\"><span style="margin-right:6px"><a href="Puppy.png"><img style="width:20px;max-height:24px" src="Puppy.png" alt="Puppy.png"/></a></span></td><td class="cell-title"><a href="https://www.notion.so/Puppy-1288f238621980fa97d6c04cb8466233?pvs=21">Puppy</a></td><td class="cell-?jM:"><span style="margin-right:6px"><a href="Puppy_(buff).png"><img style="width:20px;max-height:24px" src="Puppy_(buff).png" alt="Puppy_(buff).png"/></a></span></td></tr><tr id="1288f238-6219-808f-a08b-c7107be9c069"><td class="cell-CDP\"><span style="margin-right:6px"><a href="Pet_Sapling.png"><img style="width:20px;max-height:24px" src="Pet_Sapling.png" alt="Pet_Sapling.png"/></a></span></td><td class="cell-title"><a href="https://www.notion.so/Sapling-1288f2386219808fa08bc7107be9c069?pvs=21">Sapling</a></td><td class="cell-?jM:"><span style="margin-right:6px"><a href="Pet_Sapling_(buff).png"><img style="width:20px;max-height:24px" src="Pet_Sapling_(buff).png" alt="Pet_Sapling_(buff).png"/></a></span></td></tr><tr id="1288f238-6219-80cb-ab0c-fc393d82d9ee"><td class="cell-CDP\"><span style="margin-right:6px"><a href="Pet_Spider.png"><img style="width:20px;max-height:24px" src="Pet_Spider.png" alt="Pet_Spider.png"/></a></span></td><td class="cell-title"><a href="https://www.notion.so/Spider-1288f238621980cbab0cfc393d82d9ee?pvs=21">Spider</a></td><td class="cell-?jM:"><span style="margin-right:6px"><a href="Pet_Spider_(buff).png"><img style="width:20px;max-height:24px" src="Pet_Spider_(buff).png" alt="Pet_Spider_(buff).png"/></a></span></td></tr><tr id="1288f238-6219-80b8-b572-ce2d5e5a8f86"><td class="cell-CDP\"><span style="margin-right:6px"><a href="Shadow_Mimic_(pet).png"><img style="width:20px;max-height:24px" src="Shadow_Mimic_(pet).png" alt="Shadow_Mimic_(pet).png"/></a></span></td><td class="cell-title"><a href="https://www.notion.so/Shadow-Mimic-1288f238621980b8b572ce2d5e5a8f86?pvs=21">Shadow Mimic</a></td><td class="cell-?jM:"><span style="margin-right:6px"><a href="Shadow_Mimic_(buff).png"><img style="width:20px;max-height:24px" src="Shadow_Mimic_(buff).png" alt="Shadow_Mimic_(buff).png"/></a></span></td></tr><tr id="1288f238-6219-8065-a077-eef42604f770"><td class="cell-CDP\"><span style="margin-right:6px"><a href="Shark_Pup.png"><img style="width:20px;max-height:24px" src="Shark_Pup.png" alt="Shark_Pup.png"/></a></span></td><td class="cell-title"><a href="https://www.notion.so/Shark-Pup-1288f23862198065a077eef42604f770?pvs=21">Shark Pup</a></td><td class="cell-?jM:"><span style="margin-right:6px"><a href="Shark_Pup_(buff).png"><img style="width:20px;max-height:24px" src="Shark_Pup_(buff).png" alt="Shark_Pup_(buff).png"/></a></span></td></tr><tr id="1288f238-6219-8063-bd66-df84f8b518cc"><td class="cell-CDP\"><span style="margin-right:6px"><a href="Spiffo.png"><img style="width:20px;max-height:24px" src="Spiffo.png" alt="Spiffo.png"/></a></span></td><td class="cell-title"><a href="https://www.notion.so/Spiffo-1288f23862198063bd66df84f8b518cc?pvs=21">Spiffo</a></td><td class="cell-?jM:"><span style="margin-right:6px"><a href="Spiffo_(buff).png"><img style="width:20px;max-height:24px" src="Spiffo_(buff).png" alt="Spiffo_(buff).png"/></a></span></td></tr><tr id="1288f238-6219-80b9-98ae-fa70ac9d9484"><td class="cell-CDP\"><span style="margin-right:6px"><a href="Squashling.png"><img style="width:20px;max-height:24px" src="Squashling.png" alt="Squashling.png"/></a></span></td><td class="cell-title"><a href="https://www.notion.so/Squashling-1288f238621980b998aefa70ac9d9484?pvs=21">Squashling</a></td><td class="cell-?jM:"><span style="margin-right:6px"><a href="Squashling_(buff).png"><img style="width:20px;max-height:24px" src="Squashling_(buff).png" alt="Squashling_(buff).png"/></a></span></td></tr><tr id="1288f238-6219-80e5-bbfb-f228eb44cf6c"><td class="cell-CDP\"><span style="margin-right:6px"><a href="Sugar_Glider.png"><img style="width:20px;max-height:24px" src="Sugar_Glider.png" alt="Sugar_Glider.png"/></a></span></td><td class="cell-title"><a href="https://www.notion.so/Sugar-Glider-1288f238621980e5bbfbf228eb44cf6c?pvs=21">Sugar Glider</a></td><td class="cell-?jM:"><span style="margin-right:6px"><a href="Sugar_Glider_(buff).png"><img style="width:20px;max-height:24px" src="Sugar_Glider_(buff).png" alt="Sugar_Glider_(buff).png"/></a></span></td></tr><tr id="1288f238-6219-8069-8265-c82babd917b7"><td class="cell-CDP\"><span style="margin-right:6px"><a href="The_Dirtiest_Block.png"><img style="width:20px;max-height:24px" src="The_Dirtiest_Block.png" alt="The_Dirtiest_Block.png"/></a></span></td><td class="cell-title"><a href="https://www.notion.so/The-Dirtiest-Block-1288f238621980698265c82babd917b7?pvs=21">The Dirtiest Block</a></td><td class="cell-?jM:"><span style="margin-right:6px"><a href="The_Dirtiest_Block_(buff).png"><img style="width:20px;max-height:24px" src="The_Dirtiest_Block_(buff).png" alt="The_Dirtiest_Block_(buff).png"/></a></span></td></tr><tr id="1288f238-6219-807f-ad25-c5b46fa58249"><td class="cell-CDP\"><span style="margin-right:6px"><a href="Tiki_Spirit.png"><img style="width:20px;max-height:24px" src="Tiki_Spirit.png" alt="Tiki_Spirit.png"/></a></span></td><td class="cell-title"><a href="https://www.notion.so/Tiki-Spirit-1288f2386219807fad25c5b46fa58249?pvs=21">Tiki Spirit</a></td><td class="cell-?jM:"><span style="margin-right:6px"><a href="Tiki_Spirit_(buff).png"><img style="width:20px;max-height:24px" src="Tiki_Spirit_(buff).png" alt="Tiki_Spirit_(buff).png"/></a></span></td></tr><tr id="1288f238-6219-80f3-929f-ed90f1ae64ad"><td class="cell-CDP\"><span style="margin-right:6px"><a href="Pet_Turtle.png"><img style="width:20px;max-height:24px" src="Pet_Turtle.png" alt="Pet_Turtle.png"/></a></span></td><td class="cell-title"><a href="https://www.notion.so/Turtle-1288f238621980f3929fed90f1ae64ad?pvs=21">Turtle</a></td><td class="cell-?jM:"><span style="margin-right:6px"><a href="Pet_Turtle_(buff).png"><img style="width:20px;max-height:24px" src="Pet_Turtle_(buff).png" alt="Pet_Turtle_(buff).png"/></a></span></td></tr><tr id="1288f238-6219-8040-9d8c-d97a25156a2b"><td class="cell-CDP\"><span style="margin-right:6px"><a href="Volt_Bunny.png"><img style="width:20px;max-height:24px" src="Volt_Bunny.png" alt="Volt_Bunny.png"/></a></span></td><td class="cell-title"><a href="https://www.notion.so/Volt-Bunny-1288f238621980409d8cd97a25156a2b?pvs=21">Volt Bunny</a></td><td class="cell-?jM:"><span style="margin-right:6px"><a href="Volt_Bunny_(buff).png"><img style="width:20px;max-height:24px" src="Volt_Bunny_(buff).png" alt="Volt_Bunny_(buff).png"/></a></span></td></tr><tr id="1288f238-6219-80d5-9ebb-df3367621a36"><td class="cell-CDP\"><span style="margin-right:6px"><a href="Zephyr_Fish_(pet).png"><img style="width:20px;max-height:24px" src="Zephyr_Fish_(pet).png" alt="Zephyr_Fish_(pet).png"/></a></span></td><td class="cell-title"><a href="https://www.notion.so/Zephyr-Fish-1288f238621980d59ebbdf3367621a36?pvs=21">Zephyr Fish</a></td><td class="cell-?jM:"><span style="margin-right:6px"><a href="Zephyr_Fish_(buff).png"><img style="width:20px;max-height:24px" src="Zephyr_Fish_(buff).png" alt="Zephyr_Fish_(buff).png"/></a></span></td></tr></tbody></table><br/><br/></div><hr id="1288f238-6219-807b-ac3b-f02c24b0a778"/><h2 id="1288f238-6219-80ed-a0a3-cf3d53f9d9ee" class="">Only Hardmode</h2><div id="1288f238-6219-801d-856c-ebe0c518f267" class="collection-content"><h4 class="collection-title"></h4><table class="collection-content"><thead><tr><th><span class="icon property-icon"><svg role="graphics-symbol" viewBox="0 0 16 16" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.45);flex-shrink:0" class="typesFile"><path d="M12.5938 8.44043L7.54883 13.4854C6.26367 14.7773 4.54102 14.6475 3.44043 13.54C2.32617 12.4326 2.20312 10.7168 3.49512 9.4248L10.3926 2.52734C11.1445 1.77539 12.2725 1.63867 13.0039 2.37695C13.7422 3.11523 13.6055 4.22949 12.8535 4.98828L6.08594 11.7627C5.77832 12.0703 5.41602 11.9814 5.2041 11.7764C4.99902 11.5576 4.91016 11.2021 5.21777 10.8877L9.93457 6.1709C10.1738 5.93164 10.1875 5.58301 9.96191 5.35059C9.72949 5.13184 9.38086 5.13867 9.1416 5.37793L4.39746 10.1152C3.67285 10.8535 3.7002 11.9746 4.34961 12.624C5.05371 13.3281 6.12012 13.3145 6.8584 12.5762L13.6602 5.77441C14.9795 4.45508 14.9316 2.71875 13.7764 1.55664C12.6416 0.428711 10.8779 0.34668 9.55176 1.66602L2.61328 8.61816C0.883789 10.3477 1 12.8291 2.57227 14.4014C4.14453 15.9668 6.63281 16.0898 8.3623 14.3672L13.4414 9.28809C13.6738 9.0625 13.667 8.64551 13.4346 8.41992C13.209 8.18066 12.833 8.21484 12.5938 8.44043Z"></path></svg></span>icon</th><th><span class="icon property-icon"><svg role="graphics-symbol" viewBox="0 0 16 16" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.45);flex-shrink:0" class="typesTitle"><path d="M0.637695 13.1914C1.0957 13.1914 1.32812 13 1.47852 12.5215L2.24414 10.3887H6.14746L6.90625 12.5215C7.05664 13 7.2959 13.1914 7.74707 13.1914C8.22559 13.1914 8.5332 12.9043 8.5332 12.4531C8.5332 12.2891 8.50586 12.1523 8.44434 11.9678L5.41602 3.79199C5.2041 3.21777 4.82129 2.9375 4.19922 2.9375C3.60449 2.9375 3.21484 3.21777 3.0166 3.78516L-0.0322266 12.002C-0.09375 12.1797 -0.121094 12.3232 -0.121094 12.4668C-0.121094 12.918 0.166016 13.1914 0.637695 13.1914ZM2.63379 9.12402L4.17871 4.68066H4.21973L5.76465 9.12402H2.63379ZM12.2793 13.2324C13.3115 13.2324 14.2891 12.6787 14.7129 11.8037H14.7402V12.5762C14.7471 12.9863 15.0273 13.2393 15.4238 13.2393C15.834 13.2393 16.1143 12.9795 16.1143 12.5215V8.00977C16.1143 6.49902 14.9658 5.52148 13.1543 5.52148C11.7666 5.52148 10.6592 6.08887 10.2695 6.99121C10.1943 7.15527 10.1533 7.3125 10.1533 7.46289C10.1533 7.81152 10.4062 8.04395 10.7686 8.04395C11.0215 8.04395 11.2129 7.94824 11.3496 7.73633C11.7529 6.99121 12.2861 6.65625 13.1064 6.65625C14.0977 6.65625 14.6992 7.20996 14.6992 8.1123V8.67285L12.5664 8.7959C10.7686 8.8916 9.77734 9.69824 9.77734 11.0107C9.77734 12.3369 10.8096 13.2324 12.2793 13.2324ZM12.6621 12.1387C11.8008 12.1387 11.2129 11.667 11.2129 10.9561C11.2129 10.2725 11.7598 9.82129 12.7578 9.75977L14.6992 9.62988V10.3203C14.6992 11.3457 13.7969 12.1387 12.6621 12.1387Z"></path></svg></span>name</th><th><span class="icon property-icon"><svg role="graphics-symbol" viewBox="0 0 16 16" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.45);flex-shrink:0" class="typesFile"><path d="M12.5938 8.44043L7.54883 13.4854C6.26367 14.7773 4.54102 14.6475 3.44043 13.54C2.32617 12.4326 2.20312 10.7168 3.49512 9.4248L10.3926 2.52734C11.1445 1.77539 12.2725 1.63867 13.0039 2.37695C13.7422 3.11523 13.6055 4.22949 12.8535 4.98828L6.08594 11.7627C5.77832 12.0703 5.41602 11.9814 5.2041 11.7764C4.99902 11.5576 4.91016 11.2021 5.21777 10.8877L9.93457 6.1709C10.1738 5.93164 10.1875 5.58301 9.96191 5.35059C9.72949 5.13184 9.38086 5.13867 9.1416 5.37793L4.39746 10.1152C3.67285 10.8535 3.7002 11.9746 4.34961 12.624C5.05371 13.3281 6.12012 13.3145 6.8584 12.5762L13.6602 5.77441C14.9795 4.45508 14.9316 2.71875 13.7764 1.55664C12.6416 0.428711 10.8779 0.34668 9.55176 1.66602L2.61328 8.61816C0.883789 10.3477 1 12.8291 2.57227 14.4014C4.14453 15.9668 6.63281 16.0898 8.3623 14.3672L13.4414 9.28809C13.6738 9.0625 13.667 8.64551 13.4346 8.41992C13.209 8.18066 12.833 8.21484 12.5938 8.44043Z"></path></svg></span>buff</th></tr></thead><tbody><tr id="2ca463e2-06b1-4e06-9b36-a591845f845e"><td class="cell-y~Ue"><span style="margin-right:6px"><a href="Alien_Skater.gif"><img style="width:20px;max-height:24px" src="Alien_Skater.gif" alt="Alien_Skater.gif"/></a></span></td><td class="cell-title"><a href="https://www.notion.so/Alien-Skater-2ca463e206b14e069b36a591845f845e?pvs=21">Alien Skater</a></td><td class="cell-KN&gt;z"><span style="margin-right:6px"><a href="Alien_Skater_(buff).png"><img style="width:20px;max-height:24px" src="Alien_Skater_(buff).png" alt="Alien_Skater_(buff).png"/></a></span></td></tr><tr id="cd30589b-976e-4cf8-9eee-a625529236e8"><td class="cell-y~Ue"><span style="margin-right:6px"><a href="Baby_Ogre.png"><img style="width:20px;max-height:24px" src="Baby_Ogre.png" alt="Baby_Ogre.png"/></a></span></td><td class="cell-title"><a href="https://www.notion.so/Baby-Ogre-cd30589b976e4cf89eeea625529236e8?pvs=21">Baby Ogre</a></td><td class="cell-KN&gt;z"><span style="margin-right:6px"><a href="Baby_Ogre_(buff).png"><img style="width:20px;max-height:24px" src="Baby_Ogre_(buff).png" alt="Baby_Ogre_(buff).png"/></a></span></td></tr><tr id="20c5dbcf-4cdb-43b7-8b89-1d93114f542f"><td class="cell-y~Ue"><span style="margin-right:6px"><a href="Destroyer-Lite.png"><img style="width:20px;max-height:24px" src="Destroyer-Lite.png" alt="Destroyer-Lite.png"/></a></span></td><td class="cell-title"><a href="https://www.notion.so/Destroyer-Lite-20c5dbcf4cdb43b78b891d93114f542f?pvs=21">Destroyer-Lite</a></td><td class="cell-KN&gt;z"><span style="margin-right:6px"><a href="Destroyer-Lite_(buff).png"><img style="width:20px;max-height:24px" src="Destroyer-Lite_(buff).png" alt="Destroyer-Lite_(buff).png"/></a></span></td></tr><tr id="1298f238-6219-80cd-9527-cf3b8d2b6715"><td class="cell-y~Ue"><span style="margin-right:6px"><a href="Eater_of_Worms.png"><img style="width:20px;max-height:24px" src="Eater_of_Worms.png" alt="Eater_of_Worms.png"/></a></span></td><td class="cell-title"><a href="https://www.notion.so/Eater-of-Worms-1298f238621980cd9527cf3b8d2b6715?pvs=21">Eater of Worms</a></td><td class="cell-KN&gt;z"><span style="margin-right:6px"><a href="Eater_of_Worms_(buff).png"><img style="width:20px;max-height:24px" src="Eater_of_Worms_(buff).png" alt="Eater_of_Worms_(buff).png"/></a></span></td></tr><tr id="1298f238-6219-8033-9f4e-c43dfb60822c"><td class="cell-y~Ue"><span style="margin-right:6px"><a href="Everscream_Sapling.gif"><img style="width:20px;max-height:24px" src="Everscream_Sapling.gif" alt="Everscream_Sapling.gif"/></a></span></td><td class="cell-title"><a href="https://www.notion.so/Everscream-Sapling-1298f238621980339f4ec43dfb60822c?pvs=21">Everscream Sapling</a></td><td class="cell-KN&gt;z"><span style="margin-right:6px"><a href="Everscream_Sapling_(buff).png"><img style="width:20px;max-height:24px" src="Everscream_Sapling_(buff).png" alt="Everscream_Sapling_(buff).png"/></a></span></td></tr><tr id="1298f238-6219-80f5-82c0-d2695ce9cfc5"><td class="cell-y~Ue"><span style="margin-right:6px"><a href="Honey_Bee.gif"><img style="width:20px;max-height:24px" src="Honey_Bee.gif" alt="Honey_Bee.gif"/></a></span></td><td class="cell-title"><a href="https://www.notion.so/Honey-Bee-1298f238621980f582c0d2695ce9cfc5?pvs=21">Honey Bee</a></td><td class="cell-KN&gt;z"><span style="margin-right:6px"><a href="Honey_Bee_(buff).png"><img style="width:20px;max-height:24px" src="Honey_Bee_(buff).png" alt="Honey_Bee_(buff).png"/></a></span></td></tr><tr id="1298f238-6219-8003-a68b-dd59fda396d7"><td class="cell-y~Ue"><span style="margin-right:6px"><a href="Ice_Queen_(pet).gif"><img style="width:20px;max-height:24px" src="Ice_Queen_(pet).gif" alt="Ice_Queen_(pet).gif"/></a></span></td><td class="cell-title"><a href="https://www.notion.so/Ice-Queen-1298f23862198003a68bdd59fda396d7?pvs=21">Ice Queen</a></td><td class="cell-KN&gt;z"><span style="margin-right:6px"><a href="Ice_Queen_(buff).png"><img style="width:20px;max-height:24px" src="Ice_Queen_(buff).png" alt="Ice_Queen_(buff).png"/></a></span></td></tr><tr id="1298f238-6219-80b1-817b-db931081602b"><td class="cell-y~Ue"><span style="margin-right:6px"><a href="Itsy_Betsy.gif"><img style="width:20px;max-height:24px" src="Itsy_Betsy.gif" alt="Itsy_Betsy.gif"/></a></span></td><td class="cell-title"><a href="https://www.notion.so/Itsy-Betsy-1298f238621980b1817bdb931081602b?pvs=21">Itsy Betsy</a></td><td class="cell-KN&gt;z"><span style="margin-right:6px"><a href="Itsy_Betsy_(buff).png"><img style="width:20px;max-height:24px" src="Itsy_Betsy_(buff).png" alt="Itsy_Betsy_(buff).png"/></a></span></td></tr><tr id="1298f238-6219-8048-bd0f-e5adc1f5eaeb"><td class="cell-y~Ue"><span style="margin-right:6px"><a href="Mini_Prime.png"><img style="width:20px;max-height:24px" src="Mini_Prime.png" alt="Mini_Prime.png"/></a></span></td><td class="cell-title"><a href="https://www.notion.so/Mini-Prime-1298f23862198048bd0fe5adc1f5eaeb?pvs=21">Mini Prime</a></td><td class="cell-KN&gt;z"><span style="margin-right:6px"><a href="Mini_Prime_(buff).png"><img style="width:20px;max-height:24px" src="Mini_Prime_(buff).png" alt="Mini_Prime_(buff).png"/></a></span></td></tr><tr id="1298f238-6219-80bf-9415-d2748627b2e6"><td class="cell-y~Ue"><span style="margin-right:6px"><a href="Moonling.gif"><img style="width:20px;max-height:24px" src="Moonling.gif" alt="Moonling.gif"/></a></span></td><td class="cell-title"><a href="https://www.notion.so/Moonling-1298f238621980bf9415d2748627b2e6?pvs=21">Moonling</a></td><td class="cell-KN&gt;z"><span style="margin-right:6px"><a href="Moonling_(buff).png"><img style="width:20px;max-height:24px" src="Moonling_(buff).png" alt="Moonling_(buff).png"/></a></span></td></tr><tr id="1298f238-6219-8081-9d76-c450e566480c"><td class="cell-y~Ue"><span style="margin-right:6px"><a href="Phantasmal_Dragon.png"><img style="width:20px;max-height:24px" src="Phantasmal_Dragon.png" alt="Phantasmal_Dragon.png"/></a></span></td><td class="cell-title"><a href="https://www.notion.so/Phantasmal-Dragon-1298f238621980819d76c450e566480c?pvs=21">Phantasmal Dragon</a></td><td class="cell-KN&gt;z"><span style="margin-right:6px"><a href="Phantasmal_Dragon_(buff).png"><img style="width:20px;max-height:24px" src="Phantasmal_Dragon_(buff).png" alt="Phantasmal_Dragon_(buff).png"/></a></span></td></tr><tr id="1298f238-6219-8067-a6fd-c44bb419d88e"><td class="cell-y~Ue"><span style="margin-right:6px"><a href="Plantera_Seedling_(pet).gif"><img style="width:20px;max-height:24px" src="Plantera_Seedling_(pet).gif" alt="Plantera_Seedling_(pet).gif"/></a></span></td><td class="cell-title"><a href="https://www.notion.so/Plantera-Seedling-1298f23862198067a6fdc44bb419d88e?pvs=21">Plantera Seedling</a></td><td class="cell-KN&gt;z"><span style="margin-right:6px"><a href="Plantera_Seedling_(buff).png"><img style="width:20px;max-height:24px" src="Plantera_Seedling_(buff).png" alt="Plantera_Seedling_(buff).png"/></a></span></td></tr><tr id="1298f238-6219-8091-b6a2-d383c5d10468"><td class="cell-y~Ue"><span style="margin-right:6px"><a href="Rez_and_Spaz.png"><img style="width:20px;max-height:24px" src="Rez_and_Spaz.png" alt="Rez_and_Spaz.png"/></a></span></td><td class="cell-title"><a href="https://www.notion.so/Rez-and-Spaz-1298f23862198091b6a2d383c5d10468?pvs=21">Rez and Spaz</a></td><td class="cell-KN&gt;z"><span style="margin-right:6px"><a href="Rez_and_Spaz_(buff).png"><img style="width:20px;max-height:24px" src="Rez_and_Spaz_(buff).png" alt="Rez_and_Spaz_(buff).png"/></a></span></td></tr><tr id="1298f238-6219-8037-be6f-f2d5337d940e"><td class="cell-y~Ue"><span style="margin-right:6px"><a href="Skeletron_Jr..png"><img style="width:20px;max-height:24px" src="Skeletron_Jr..png" alt="Skeletron_Jr..png"/></a></span></td><td class="cell-title"><a href="https://www.notion.so/Skeletron-Jr-1298f23862198037be6ff2d5337d940e?pvs=21">Skeletron Jr.</a></td><td class="cell-KN&gt;z"><span style="margin-right:6px"><a href="Skeletron_Jr._(buff).png"><img style="width:20px;max-height:24px" src="Skeletron_Jr._(buff).png" alt="Skeletron_Jr._(buff).png"/></a></span></td></tr><tr id="1298f238-6219-80dd-8e84-faba67a6a625"><td class="cell-y~Ue"><span style="margin-right:6px"><a href="Slime_Prince.gif"><img style="width:20px;max-height:24px" src="Slime_Prince.gif" alt="Slime_Prince.gif"/></a></span></td><td class="cell-title"><a href="https://www.notion.so/Slime-Prince-1298f238621980dd8e84faba67a6a625?pvs=21">Slime Prince</a></td><td class="cell-KN&gt;z"><span style="margin-right:6px"><a href="Slime_Prince_(buff).png"><img style="width:20px;max-height:24px" src="Slime_Prince_(buff).png" alt="Slime_Prince_(buff).png"/></a></span></td></tr><tr id="1298f238-6219-80fb-abcd-e2990a09fa76"><td class="cell-y~Ue"><span style="margin-right:6px"><a href="Slime_Princess.gif"><img style="width:20px;max-height:24px" src="Slime_Princess.gif" alt="Slime_Princess.gif"/></a></span></td><td class="cell-title"><a href="https://www.notion.so/Slime-Princess-1298f238621980fbabcde2990a09fa76?pvs=21">Slime Princess</a></td><td class="cell-KN&gt;z"><span style="margin-right:6px"><a href="Slime_Princess_(buff).png"><img style="width:20px;max-height:24px" src="Slime_Princess_(buff).png" alt="Slime_Princess_(buff).png"/></a></span></td></tr><tr id="1298f238-6219-809e-95cb-e171521ddc77"><td class="cell-y~Ue"><span style="margin-right:6px"><a href="Slime_Princess%201.gif"><img style="width:20px;max-height:24px" src="Slime_Princess%201.gif" alt="Slime_Princess.gif"/></a></span><span style="margin-right:6px"><a href="Slime_Prince%201.gif"><img style="width:20px;max-height:24px" src="Slime_Prince%201.gif" alt="Slime_Prince.gif"/></a></span></td><td class="cell-title"><a href="https://www.notion.so/Slime-Princess-1298f2386219809e95cbe171521ddc77?pvs=21">Slime Princess</a></td><td class="cell-KN&gt;z"><span style="margin-right:6px"><a href="Slime_Royals.png"><img style="width:20px;max-height:24px" src="Slime_Royals.png" alt="Slime_Royals.png"/></a></span></td></tr><tr id="1298f238-6219-801b-bb56-ea4003191e30"><td class="cell-y~Ue"><span style="margin-right:6px"><a href="Spider_Brain.gif"><img style="width:20px;max-height:24px" src="Spider_Brain.gif" alt="Spider_Brain.gif"/></a></span></td><td class="cell-title"><a href="https://www.notion.so/Spider-Brain-1298f2386219801bbb56ea4003191e30?pvs=21">Spider Brain</a></td><td class="cell-KN&gt;z"><span style="margin-right:6px"><a href="Spider_Brain_(buff).png"><img style="width:20px;max-height:24px" src="Spider_Brain_(buff).png" alt="Spider_Brain_(buff).png"/></a></span></td></tr><tr id="1298f238-6219-80d9-b197-fd8702c3ff0f"><td class="cell-y~Ue"><span style="margin-right:6px"><a href="Suspicious_Eye.gif"><img style="width:20px;max-height:24px" src="Suspicious_Eye.gif" alt="Suspicious_Eye.gif"/></a></span></td><td class="cell-title"><a href="https://www.notion.so/Suspicious-Eye-1298f238621980d9b197fd8702c3ff0f?pvs=21">Suspicious Eye</a></td><td class="cell-KN&gt;z"><span style="margin-right:6px"><a href="Suspicious_Eye_(buff).png"><img style="width:20px;max-height:24px" src="Suspicious_Eye_(buff).png" alt="Suspicious_Eye_(buff).png"/></a></span></td></tr><tr id="1298f238-6219-8041-a957-d3767a78b5bf"><td class="cell-y~Ue"><span style="margin-right:6px"><a href="Deerclops_(pet).gif"><img style="width:20px;max-height:24px" src="Deerclops_(pet).gif" alt="Deerclops_(pet).gif"/></a></span></td><td class="cell-title"><a href="https://www.notion.so/Tiny-Deerclops-1298f23862198041a957d3767a78b5bf?pvs=21">Tiny Deerclops</a></td><td class="cell-KN&gt;z"><span style="margin-right:6px"><a href="Tiny_Deerclops_(buff).png"><img style="width:20px;max-height:24px" src="Tiny_Deerclops_(buff).png" alt="Tiny_Deerclops_(buff).png"/></a></span></td></tr><tr id="1298f238-6219-80e1-8657-ef698f3b2d4c"><td class="cell-y~Ue"><span style="margin-right:6px"><a href="Tiny_Fishron.gif"><img style="width:20px;max-height:24px" src="Tiny_Fishron.gif" alt="Tiny_Fishron.gif"/></a></span></td><td class="cell-title"><a href="https://www.notion.so/iny-Fishron-1298f238621980e18657ef698f3b2d4c?pvs=21">iny Fishron</a></td><td class="cell-KN&gt;z"><span style="margin-right:6px"><a href="Tiny_Fishron_(buff).png"><img style="width:20px;max-height:24px" src="Tiny_Fishron_(buff).png" alt="Tiny_Fishron_(buff).png"/></a></span></td></tr></tbody></table><br/><br/></div><hr id="1298f238-6219-806d-8845-f220cad57fb3"/><h2 id="1298f238-6219-800b-bfc9-df879f8845f0" class="">Lights Pets</h2><div id="1298f238-6219-8039-be70-f09229640cdd" class="collection-content"><h4 class="collection-title"></h4><table class="collection-content"><thead><tr><th><span class="icon property-icon"><svg role="graphics-symbol" viewBox="0 0 16 16" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.45);flex-shrink:0" class="typesFile"><path d="M12.5938 8.44043L7.54883 13.4854C6.26367 14.7773 4.54102 14.6475 3.44043 13.54C2.32617 12.4326 2.20312 10.7168 3.49512 9.4248L10.3926 2.52734C11.1445 1.77539 12.2725 1.63867 13.0039 2.37695C13.7422 3.11523 13.6055 4.22949 12.8535 4.98828L6.08594 11.7627C5.77832 12.0703 5.41602 11.9814 5.2041 11.7764C4.99902 11.5576 4.91016 11.2021 5.21777 10.8877L9.93457 6.1709C10.1738 5.93164 10.1875 5.58301 9.96191 5.35059C9.72949 5.13184 9.38086 5.13867 9.1416 5.37793L4.39746 10.1152C3.67285 10.8535 3.7002 11.9746 4.34961 12.624C5.05371 13.3281 6.12012 13.3145 6.8584 12.5762L13.6602 5.77441C14.9795 4.45508 14.9316 2.71875 13.7764 1.55664C12.6416 0.428711 10.8779 0.34668 9.55176 1.66602L2.61328 8.61816C0.883789 10.3477 1 12.8291 2.57227 14.4014C4.14453 15.9668 6.63281 16.0898 8.3623 14.3672L13.4414 9.28809C13.6738 9.0625 13.667 8.64551 13.4346 8.41992C13.209 8.18066 12.833 8.21484 12.5938 8.44043Z"></path></svg></span>icon</th><th><span class="icon property-icon"><svg role="graphics-symbol" viewBox="0 0 16 16" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.45);flex-shrink:0" class="typesTitle"><path d="M0.637695 13.1914C1.0957 13.1914 1.32812 13 1.47852 12.5215L2.24414 10.3887H6.14746L6.90625 12.5215C7.05664 13 7.2959 13.1914 7.74707 13.1914C8.22559 13.1914 8.5332 12.9043 8.5332 12.4531C8.5332 12.2891 8.50586 12.1523 8.44434 11.9678L5.41602 3.79199C5.2041 3.21777 4.82129 2.9375 4.19922 2.9375C3.60449 2.9375 3.21484 3.21777 3.0166 3.78516L-0.0322266 12.002C-0.09375 12.1797 -0.121094 12.3232 -0.121094 12.4668C-0.121094 12.918 0.166016 13.1914 0.637695 13.1914ZM2.63379 9.12402L4.17871 4.68066H4.21973L5.76465 9.12402H2.63379ZM12.2793 13.2324C13.3115 13.2324 14.2891 12.6787 14.7129 11.8037H14.7402V12.5762C14.7471 12.9863 15.0273 13.2393 15.4238 13.2393C15.834 13.2393 16.1143 12.9795 16.1143 12.5215V8.00977C16.1143 6.49902 14.9658 5.52148 13.1543 5.52148C11.7666 5.52148 10.6592 6.08887 10.2695 6.99121C10.1943 7.15527 10.1533 7.3125 10.1533 7.46289C10.1533 7.81152 10.4062 8.04395 10.7686 8.04395C11.0215 8.04395 11.2129 7.94824 11.3496 7.73633C11.7529 6.99121 12.2861 6.65625 13.1064 6.65625C14.0977 6.65625 14.6992 7.20996 14.6992 8.1123V8.67285L12.5664 8.7959C10.7686 8.8916 9.77734 9.69824 9.77734 11.0107C9.77734 12.3369 10.8096 13.2324 12.2793 13.2324ZM12.6621 12.1387C11.8008 12.1387 11.2129 11.667 11.2129 10.9561C11.2129 10.2725 11.7598 9.82129 12.7578 9.75977L14.6992 9.62988V10.3203C14.6992 11.3457 13.7969 12.1387 12.6621 12.1387Z"></path></svg></span>name</th><th><span class="icon property-icon"><svg role="graphics-symbol" viewBox="0 0 16 16" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.45);flex-shrink:0" class="typesFile"><path d="M12.5938 8.44043L7.54883 13.4854C6.26367 14.7773 4.54102 14.6475 3.44043 13.54C2.32617 12.4326 2.20312 10.7168 3.49512 9.4248L10.3926 2.52734C11.1445 1.77539 12.2725 1.63867 13.0039 2.37695C13.7422 3.11523 13.6055 4.22949 12.8535 4.98828L6.08594 11.7627C5.77832 12.0703 5.41602 11.9814 5.2041 11.7764C4.99902 11.5576 4.91016 11.2021 5.21777 10.8877L9.93457 6.1709C10.1738 5.93164 10.1875 5.58301 9.96191 5.35059C9.72949 5.13184 9.38086 5.13867 9.1416 5.37793L4.39746 10.1152C3.67285 10.8535 3.7002 11.9746 4.34961 12.624C5.05371 13.3281 6.12012 13.3145 6.8584 12.5762L13.6602 5.77441C14.9795 4.45508 14.9316 2.71875 13.7764 1.55664C12.6416 0.428711 10.8779 0.34668 9.55176 1.66602L2.61328 8.61816C0.883789 10.3477 1 12.8291 2.57227 14.4014C4.14453 15.9668 6.63281 16.0898 8.3623 14.3672L13.4414 9.28809C13.6738 9.0625 13.667 8.64551 13.4346 8.41992C13.209 8.18066 12.833 8.21484 12.5938 8.44043Z"></path></svg></span>buff</th></tr></thead><tbody><tr id="e6035df0-ff63-481a-b55d-084e9c2be999"><td class="cell-biNp"><span style="margin-right:6px"><a href="Shadow_Orb_(light_pet).png"><img style="width:20px;max-height:24px" src="Shadow_Orb_(light_pet).png" alt="Shadow_Orb_(light_pet).png"/></a></span></td><td class="cell-title"><a href="https://www.notion.so/Shadow-Orb-e6035df0ff63481ab55d084e9c2be999?pvs=21">Shadow Orb</a></td><td class="cell-|?\c"><span style="margin-right:6px"><a href="Shadow_Orb_(buff).png"><img style="width:20px;max-height:24px" src="Shadow_Orb_(buff).png" alt="Shadow_Orb_(buff).png"/></a></span></td></tr><tr id="c31344a8-4c34-49c9-8586-3977b76296b5"><td class="cell-biNp"><span style="margin-right:6px"><a href="Crimson_Heart_(light_pet).gif"><img style="width:20px;max-height:24px" src="Crimson_Heart_(light_pet).gif" alt="Crimson_Heart_(light_pet).gif"/></a></span></td><td class="cell-title"><a href="https://www.notion.so/Crimson-Heart-c31344a84c3449c985863977b76296b5?pvs=21">Crimson Heart</a></td><td class="cell-|?\c"><span style="margin-right:6px"><a href="Crimson_Heart_(buff).png"><img style="width:20px;max-height:24px" src="Crimson_Heart_(buff).png" alt="Crimson_Heart_(buff).png"/></a></span></td></tr><tr id="976de9d8-529f-4752-8cb9-3440911ded35"><td class="cell-biNp"><span style="margin-right:6px"><a href="Magic_Lantern_(light_pet).png"><img style="width:20px;max-height:24px" src="Magic_Lantern_(light_pet).png" alt="Magic_Lantern_(light_pet).png"/></a></span></td><td class="cell-title"><a href="https://www.notion.so/Magic-Lantern-976de9d8529f47528cb93440911ded35?pvs=21">Magic Lantern</a></td><td class="cell-|?\c"><span style="margin-right:6px"><a href="Magic_Lantern_(buff).png"><img style="width:20px;max-height:24px" src="Magic_Lantern_(buff).png" alt="Magic_Lantern_(buff).png"/></a></span></td></tr><tr id="1298f238-6219-80ef-9f6d-ec82b331b8ba"><td class="cell-biNp"><span style="margin-right:6px"><a href="Pink_Fairy_(pet).png"><img style="width:20px;max-height:24px" src="Pink_Fairy_(pet).png" alt="Pink_Fairy_(pet).png"/></a></span><span style="margin-right:6px"><a href="Green_Fairy_(pet).png"><img style="width:20px;max-height:24px" src="Green_Fairy_(pet).png" alt="Green_Fairy_(pet).png"/></a></span><span style="margin-right:6px"><a href="Blue_Fairy_(pet).png"><img style="width:20px;max-height:24px" src="Blue_Fairy_(pet).png" alt="Blue_Fairy_(pet).png"/></a></span></td><td class="cell-title"><a href="https://www.notion.so/Fairy-1298f238621980ef9f6dec82b331b8ba?pvs=21">Fairy</a></td><td class="cell-|?\c"><span style="margin-right:6px"><a href="Fairy_(buff).png"><img style="width:20px;max-height:24px" src="Fairy_(buff).png" alt="Fairy_(buff).png"/></a></span></td></tr><tr id="1298f238-6219-8066-9029-c5516da264f3"><td class="cell-biNp"><span style="margin-right:6px"><a href="Flickerwick_(light_pet).gif"><img style="width:20px;max-height:24px" src="Flickerwick_(light_pet).gif" alt="Flickerwick_(light_pet).gif"/></a></span></td><td class="cell-title"><a href="https://www.notion.so/Flickerwick-1298f238621980669029c5516da264f3?pvs=21">Flickerwick</a></td><td class="cell-|?\c"><span style="margin-right:6px"><a href="Flickerwick_(buff).png"><img style="width:20px;max-height:24px" src="Flickerwick_(buff).png" alt="Flickerwick_(buff).png"/></a></span></td></tr><tr id="1298f238-6219-805d-94aa-d7f81f529370"><td class="cell-biNp"><span style="margin-right:6px"><a href="Wisp_(light_pet).gif"><img style="width:20px;max-height:24px" src="Wisp_(light_pet).gif" alt="Wisp_(light_pet).gif"/></a></span></td><td class="cell-title"><a href="https://www.notion.so/Wisp-1298f2386219805d94aad7f81f529370?pvs=21">Wisp</a></td><td class="cell-|?\c"><span style="margin-right:6px"><a href="Wisp_(buff).png"><img style="width:20px;max-height:24px" src="Wisp_(buff).png" alt="Wisp_(buff).png"/></a></span></td></tr><tr id="1298f238-6219-80d4-b576-f2d7a3b7031e"><td class="cell-biNp"><span style="margin-right:6px"><a href="Suspicious_Looking_Eye_(light_pet).gif"><img style="width:20px;max-height:24px" src="Suspicious_Looking_Eye_(light_pet).gif" alt="Suspicious_Looking_Eye_(light_pet).gif"/></a></span></td><td class="cell-title"><a href="https://www.notion.so/Suspicious-Looking-Eye-1298f238621980d4b576f2d7a3b7031e?pvs=21">Suspicious Looking Eye</a></td><td class="cell-|?\c"><span style="margin-right:6px"><a href="Suspicious_Looking_Eye_(buff).png"><img style="width:20px;max-height:24px" src="Suspicious_Looking_Eye_(buff).png" alt="Suspicious_Looking_Eye_(buff).png"/></a></span></td></tr></tbody></table><br/><br/></div><hr id="1298f238-6219-807e-8a11-fa5b159dc6d0"/><h2 id="1298f238-6219-8040-8905-d27bae360ebf" class=""><strong><a href="https://terraria.fandom.com/wiki/Master_Mode">Master Mode</a></strong></h2><div id="1298f238-6219-80a0-af68-e2b1b8e5262a" class="collection-content"><h4 class="collection-title"></h4><table class="collection-content"><thead><tr><th><span class="icon property-icon"><svg role="graphics-symbol" viewBox="0 0 16 16" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.45);flex-shrink:0" class="typesFile"><path d="M12.5938 8.44043L7.54883 13.4854C6.26367 14.7773 4.54102 14.6475 3.44043 13.54C2.32617 12.4326 2.20312 10.7168 3.49512 9.4248L10.3926 2.52734C11.1445 1.77539 12.2725 1.63867 13.0039 2.37695C13.7422 3.11523 13.6055 4.22949 12.8535 4.98828L6.08594 11.7627C5.77832 12.0703 5.41602 11.9814 5.2041 11.7764C4.99902 11.5576 4.91016 11.2021 5.21777 10.8877L9.93457 6.1709C10.1738 5.93164 10.1875 5.58301 9.96191 5.35059C9.72949 5.13184 9.38086 5.13867 9.1416 5.37793L4.39746 10.1152C3.67285 10.8535 3.7002 11.9746 4.34961 12.624C5.05371 13.3281 6.12012 13.3145 6.8584 12.5762L13.6602 5.77441C14.9795 4.45508 14.9316 2.71875 13.7764 1.55664C12.6416 0.428711 10.8779 0.34668 9.55176 1.66602L2.61328 8.61816C0.883789 10.3477 1 12.8291 2.57227 14.4014C4.14453 15.9668 6.63281 16.0898 8.3623 14.3672L13.4414 9.28809C13.6738 9.0625 13.667 8.64551 13.4346 8.41992C13.209 8.18066 12.833 8.21484 12.5938 8.44043Z"></path></svg></span>icon</th><th><span class="icon property-icon"><svg role="graphics-symbol" viewBox="0 0 16 16" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.45);flex-shrink:0" class="typesTitle"><path d="M0.637695 13.1914C1.0957 13.1914 1.32812 13 1.47852 12.5215L2.24414 10.3887H6.14746L6.90625 12.5215C7.05664 13 7.2959 13.1914 7.74707 13.1914C8.22559 13.1914 8.5332 12.9043 8.5332 12.4531C8.5332 12.2891 8.50586 12.1523 8.44434 11.9678L5.41602 3.79199C5.2041 3.21777 4.82129 2.9375 4.19922 2.9375C3.60449 2.9375 3.21484 3.21777 3.0166 3.78516L-0.0322266 12.002C-0.09375 12.1797 -0.121094 12.3232 -0.121094 12.4668C-0.121094 12.918 0.166016 13.1914 0.637695 13.1914ZM2.63379 9.12402L4.17871 4.68066H4.21973L5.76465 9.12402H2.63379ZM12.2793 13.2324C13.3115 13.2324 14.2891 12.6787 14.7129 11.8037H14.7402V12.5762C14.7471 12.9863 15.0273 13.2393 15.4238 13.2393C15.834 13.2393 16.1143 12.9795 16.1143 12.5215V8.00977C16.1143 6.49902 14.9658 5.52148 13.1543 5.52148C11.7666 5.52148 10.6592 6.08887 10.2695 6.99121C10.1943 7.15527 10.1533 7.3125 10.1533 7.46289C10.1533 7.81152 10.4062 8.04395 10.7686 8.04395C11.0215 8.04395 11.2129 7.94824 11.3496 7.73633C11.7529 6.99121 12.2861 6.65625 13.1064 6.65625C14.0977 6.65625 14.6992 7.20996 14.6992 8.1123V8.67285L12.5664 8.7959C10.7686 8.8916 9.77734 9.69824 9.77734 11.0107C9.77734 12.3369 10.8096 13.2324 12.2793 13.2324ZM12.6621 12.1387C11.8008 12.1387 11.2129 11.667 11.2129 10.9561C11.2129 10.2725 11.7598 9.82129 12.7578 9.75977L14.6992 9.62988V10.3203C14.6992 11.3457 13.7969 12.1387 12.6621 12.1387Z"></path></svg></span>name</th><th><span class="icon property-icon"><svg role="graphics-symbol" viewBox="0 0 16 16" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.45);flex-shrink:0" class="typesFile"><path d="M12.5938 8.44043L7.54883 13.4854C6.26367 14.7773 4.54102 14.6475 3.44043 13.54C2.32617 12.4326 2.20312 10.7168 3.49512 9.4248L10.3926 2.52734C11.1445 1.77539 12.2725 1.63867 13.0039 2.37695C13.7422 3.11523 13.6055 4.22949 12.8535 4.98828L6.08594 11.7627C5.77832 12.0703 5.41602 11.9814 5.2041 11.7764C4.99902 11.5576 4.91016 11.2021 5.21777 10.8877L9.93457 6.1709C10.1738 5.93164 10.1875 5.58301 9.96191 5.35059C9.72949 5.13184 9.38086 5.13867 9.1416 5.37793L4.39746 10.1152C3.67285 10.8535 3.7002 11.9746 4.34961 12.624C5.05371 13.3281 6.12012 13.3145 6.8584 12.5762L13.6602 5.77441C14.9795 4.45508 14.9316 2.71875 13.7764 1.55664C12.6416 0.428711 10.8779 0.34668 9.55176 1.66602L2.61328 8.61816C0.883789 10.3477 1 12.8291 2.57227 14.4014C4.14453 15.9668 6.63281 16.0898 8.3623 14.3672L13.4414 9.28809C13.6738 9.0625 13.667 8.64551 13.4346 8.41992C13.209 8.18066 12.833 8.21484 12.5938 8.44043Z"></path></svg></span>buff</th></tr></thead><tbody><tr id="a992f57d-0afe-4bb3-9117-cf4082ecfec0"><td class="cell-g\}y"><span style="margin-right:6px"><a href="Jack_O_Lantern_(light_pet).gif"><img style="width:20px;max-height:24px" src="Jack_O_Lantern_(light_pet).gif" alt="Jack_&#x27;O_Lantern_(light_pet).gif"/></a></span></td><td class="cell-title"><a href="https://www.notion.so/Jack-O-Lantern-a992f57d0afe4bb39117cf4082ecfec0?pvs=21">Jack &#x27;O Lantern</a></td><td class="cell-AMe\"><span style="margin-right:6px"><a href="Jack_O_Lantern_(buff).png"><img style="width:20px;max-height:24px" src="Jack_O_Lantern_(buff).png" alt="Jack_&#x27;O_Lantern_(buff).png"/></a></span></td></tr><tr id="37500fbd-c434-4b55-981d-7e79e65e1fd8"><td class="cell-g\}y"><span style="margin-right:6px"><a href="Toy_Golem.gif"><img style="width:20px;max-height:24px" src="Toy_Golem.gif" alt="Toy_Golem.gif"/></a></span></td><td class="cell-title"><a href="https://www.notion.so/Toy-Golem-37500fbdc4344b55981d7e79e65e1fd8?pvs=21">Toy Golem</a></td><td class="cell-AMe\"><span style="margin-right:6px"><a href="Toy_Golem_(buff).png"><img style="width:20px;max-height:24px" src="Toy_Golem_(buff).png" alt="Toy_Golem_(buff).png"/></a></span></td></tr><tr id="1bbe4140-d978-449e-b299-aa00a9f6bc2f"><td class="cell-g\}y"><span style="margin-right:6px"><a href="Fairy_Princess.gif"><img style="width:20px;max-height:24px" src="Fairy_Princess.gif" alt="Fairy_Princess.gif"/></a></span></td><td class="cell-title"><a href="https://www.notion.so/Fairy-Princess-1bbe4140d978449eb299aa00a9f6bc2f?pvs=21">Fairy Princess</a></td><td class="cell-AMe\"><span style="margin-right:6px"><a href="Fairy_Princess_(buff).png"><img style="width:20px;max-height:24px" src="Fairy_Princess_(buff).png" alt="Fairy_Princess_(buff).png"/></a></span></td></tr></tbody></table><br/><br/></div><hr id="1298f238-6219-80cb-87c8-fdfb15d04cc3"/><p id="1298f238-6219-8037-a0ab-fd57075c336f" class="">
+</p></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>
